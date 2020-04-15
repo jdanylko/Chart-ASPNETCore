@@ -1,0 +1,15 @@
+﻿@model ChartJsViewModel
+
+<div class="chart-container" width="600" height="400">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, @Html.Raw(Model.ChartJson) );
+
+    });
+</script>
+
